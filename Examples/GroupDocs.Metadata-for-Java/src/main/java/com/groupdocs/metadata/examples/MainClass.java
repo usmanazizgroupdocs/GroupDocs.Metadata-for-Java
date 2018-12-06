@@ -1,17 +1,21 @@
 package com.groupdocs.metadata.examples;
 
-import com.groupdocs.metadata.examples.Utilities.*;
+import com.groupdocs.metadata.examples.Utilities.Common;
 
 public class MainClass {
-	public static void main(String[] args) throws Throwable {
-		
+	public static void main(String[] args) {
+
+		//region Working with licensing
 		// Uncomment following code if you have license file
-        // Common.applyLicenseFromFile();
+         Common.applyLicenseFromFile();
 
 		// Using metered license
 		// Common.useDynabicMeteredAccount();
+		//endregion
 
-		// Working with Documents
+		//region Working with Documents
+
+		//region Working Doc files
 		// Get document properties of Doc file
 		// Documents.Doc.getDocumentProperties();
 
@@ -84,7 +88,15 @@ public class MainClass {
 		//Read ImageCover using Metadata Utility
 		//Documents.Doc.readImageCoverMetadataUtility();
 
-		// Working with Ppt Files
+		//Find Metadata Using Regex
+		//Documents.Doc.findMetadataUsingRegex();
+
+		//Replace Metadata Using Regex
+		//Documents.Doc.replaceMetadataUsingRegex();
+		//endregion
+
+		//region Working with Ppt files
+
 		// Get document properties of Ppt file
 		// Documents.Ppt.getDocumentProperties();
 
@@ -108,13 +120,15 @@ public class MainClass {
 
 		// Removes Comments, and Hidden Slides of Ppt File
 		// Documents.Ppt.removeHiddenData();
+		//endregion
 
-		// Working with Xls Files
+		//region Working with Xls files
+
 		// Get document properties of Xls file
-		// Documents.Xls.getDocumentProperties();
+		 Documents.Xls.getDocumentProperties();
 
 		// Update document properties of Xls file
-		// Documents.Xls.updateDocumentProperties();
+		 Documents.Xls.updateDocumentProperties();
 
 		// Remove document properties of Xls file
 		// Documents.Xls.removeDocumentProperties();
@@ -149,7 +163,10 @@ public class MainClass {
 		// Read ImageCover using Metadata Utility
 		// Documents.Xls.readImageCoverMetadataUtility();
 
-		// Working with Pdf Files
+		//endregion
+
+		//region Working with Pdf files
+
 		// Get document properties of Pdf file
 		// Documents.Pdf.getDocumentProperties();
 
@@ -180,32 +197,85 @@ public class MainClass {
 		//Read DublinCore Metadata
 		//Documents.Pdf.readDublinCoreMetadata();
 
-		// Working with MSVisio Files
+		//endregion
+
+		//region Working with MSVisio files
+
 		// Get metadata of MSVisio file
 		// Documents.MSVisio.getMetadata();
 
 		// Set metadata of MSVisio File
 		// Documents.MSVisio.updateMetadata();
 
-		// Working with OneNote Files
+		//endregion
+
+		//region Working with OneNote files
+
 		// Get Pages Info of OneNote file
 		// Documents.OneNote.getPagesInfo();
 
-		// Working with MSProject Files
+		//endregion
+
+		//region Working with MSProject files
+
 		// Get Metadata
 		// Documents.MSProject.getMetadata();
 
-		// Working with Odt files
+		//Update MS Project Metadata
+		//Documents.MSProject.updateMetadata();
+
+		//Clean MS Project Metadata
+		//Documents.MSProject.cleanMetadata();
+
+		//Update MS Project Metadata using Stream
+		//Documents.MSProject.updateMetadataUsingStream();
+
+		//endregion
+
+		//region Working with Odt files
+
 		// Read metadata of odt File
 		// Documents.ODT.getOdtMetadata();
 
 		// Update metadata of odt file
 		// Documents.ODT.updateOdtMetadata();
 
-		// Working with ODS files
-		// Documents.ODS.readOdsMetadata();
+		//endregion
 
-		// Working with Images
+		//region Working with ODS files
+		// Documents.ODS.readOdsMetadata();
+		//endregion
+
+		//region Working EPUB file
+
+		//Detects EPUB file format
+		//Documents.EPUB.detectEPUBFormat();
+
+		//Read EPUB file format metadata
+		//Documents.EPUB.readEPUBFormatMetadata();
+
+		//Read Dublin Core Metadata
+		//Documents.EPUB.readDublinCoreMetadata();
+
+		//Read Image covr from EPUB Format
+		//Documents.EPUB.readImageCover();
+
+		//Read version of EPUB Package
+		//Documents.EPUB.readEPUBPackageVersion();
+
+		//Read DublinCore Metadata using unified approach
+		//Documents.EPUB.readDublinCoreMetadataUtility();
+
+		//Get Torrent Metadata Using Stream
+		//Documents.EPUB.getMetadataUsingStream();
+
+		//endregion
+
+		//endregion
+
+		//region Working with Images
+
+		//region working with JP2 images
 		// Read Metadata of JP2 Format
 		// Images.JP2.readMetadataJP2();
 
@@ -218,12 +288,21 @@ public class MainClass {
 		// Remove XMP properties of Jpeg2000 image
 		// Images.JP2.removeXMPProperties();
 
-		// Working with Gif
+		//endregion
+
+		//region Working with Gif
+
 		// Get XMP properties of Gif image
 		// Images.Gif.getXMPProperties();
 
+		// Get XMP properties of Gif image using Stream
+		// Images.Gif.getXMPPropertiesUsingStream();
+
 		// Update XMP properties of Gif image
 		// Images.Gif.updateXMPProperties();
+
+		// Update XMP properties of Gif image
+		// Images.Gif.updateXMPPropertiesUsingStream();
 
 		// Remove XMP properties of Gif image
 		// Images.Gif.removeXMPProperties();
@@ -240,12 +319,26 @@ public class MainClass {
 		// Remove Medatadata of Gif image
 		// Images.Gif.removeMetadata();
 
-		// Working with Jpeg
+		// Find XMP Metadata Using Regex
+		// Images.Gif.findXmpMetadataUsingRegex();
+
+		// Update XMP Metadata Using Regex
+		// Images.Gif.replaceXmpMetadataUsingRegex();
+
+		//endregion
+
+		//region Working with Jpeg
 		// Get XMP properties of Jpeg image
 		// Images.Jpeg.getXMPProperties();
 
+		// Get XMP properties of Jpeg image using Stream
+		// Images.Jpeg.getXMPPropertiesUsingStream();
+
 		// Update XMP properties of Jpeg image
 		// Images.Jpeg.updateXMPProperties();
+
+		// Update XMP properties of Jpeg image
+		// Images.Jpeg.updateXMPPropertiesUsingStream();
 
 		// Remove XMP properties of Jpeg image
 		// Images.Jpeg.removeXMPProperties();
@@ -304,14 +397,25 @@ public class MainClass {
 		// Read Image Resource Blocks
 		// Images.Jpeg.readImageResourceBlocks();
 
-
 		// Read Sony maker notes
 		// Images.Jpeg.readSonyMakerNotes();
 
         //The method loads and save EXIF metadata with better speed
         //Images.Jpeg.getEXIFMetadataWithBetterSpeed();
 
-		// Working with Png
+        //Find EXIF Metadata using regex
+        //Images.Jpeg.findEXIFMetadataUsingRegex();
+
+        //Replace EXIF Metadata using regex
+		//Images.Jpeg.replaceEXIFMetadataUsingRegex();
+		
+		//Get TIFF Tags using EXIF Properties 
+		//Images.Jpeg.getTiffTagsUsingExifProperties();
+
+		//endregion
+
+		//region Working with Png
+
 		// Get XMP properties of Png image
 		// Images.Png.getXMPProperties();
 
@@ -330,9 +434,15 @@ public class MainClass {
 		// Update Basic Jon XMP properties values of Png image
 		// Images.Png.updateBasicJobXMPProperties();
 
-		// Working with Tiff
+		//endregion
+
+		//region Working with Tiff
+
 		// Get XMP properties of Tiff image
 		// Images.Tiff.getXMPProperties();
+
+		// Get XMP properties of Tiff image using Stream
+		// Images.Tiff.getXMPPropertiesusingStream();
 
 		// Read File Directory Tags of Tiff Image
 		// Images.Tiff.readTiffFileDirectoryTags();
@@ -352,26 +462,62 @@ public class MainClass {
 		// Read IPTC metadata from Tiff File
 		// Images.Tiff.readIPTCmetadataTiff();
 
-		// Working with WebP
+		// Remove XMP Metadata
+		// Images.Tiff.removeXMPMetadata();
+
+		// Remove XMP Metadata Using Stream
+		// Images.Tiff.removeXMPMetadataUsingStream();
+
+		// Extract Specifc TIFF Tags 
+		// Images.Tiff.extractSpecificTiffTags();
+
+		// Update Exif Info of Tiff image using shortcut properties
+		// Images.Tiff.updateExifMetadataUsingShortcutProperties();
+
+		// Update Exif Info of Tiff image by replacing tag collection 
+		// Images.Tiff.updateExifMetadatByReplacingTagCollection();
+
+		// Update Exif IFD Tags of Tiff image using shortcut properties
+		// Images.Tiff.updateExifIFDTagsUsingShortcutProperties();
+
+		// Update Exif IFD Tags of Tiff image by replacing tag collection 
+		// Images.Tiff.updateExifIFDTagsByReplacingTagCollection();
+
+		//endregion
+
+		//region Working with WebP
+
 		// Get metadata properties of WebP image
 		// Images.WebP.getMetadataProperties();
 
-		// Working with Djvu
+		//endregion
+
+		//region Working with Djvu
+
 		// Get metadata properties of emf image
 		// Images.DJVU.getMetadataProperties();
 
-		// Working with BMP images
+		//endregion
+
+		//region Working with BMP
+
 		// Get metadata properties of bmp image
 		// Images.BMP.getMetadataProperties();
 
 		// Get header properties bmp image
 		// Images.BMP.getHeaderProperties();
 
-		// Working with Dicom images
+		//endregion
+
+		//region Working with Dicom
+
 		// Read metadata of a DICOM file
 		// Images.DICOM.getheaderProperties();
 
-		// Working with PSD
+		//endregion
+
+		//region Working with PSD
+
 		// Read metadata of PSD file
 		// Images.Psd.getPsdInfo();
 
@@ -384,23 +530,55 @@ public class MainClass {
 		// Read IPTC metadata from PSF file
 		// Images.Psd.readIPTCmetadataPsd();
 
-		// Working with Emf
+		// Update IPTC Metadata
+		//Images.Psd.updateIPTCMetadata();
+
+		// Remove IPTC Metadata
+		//Images.Psd.removeIPTCMetadata();
+
+		// Read IPTC Metadata PSD file using stream
+		//Images.Psd.readIPTCMetadatasUsingStream();
+
+		// Update IPTC Metadata using steam
+		//Images.Psd.updateIPTCMetadataUsingStream();
+
+		// Read EXIF Metadata
+		// Images.Psd.readEXIFMetadata();
+
+		//endregion
+
+		//region Working with Emf
+
 		// Get metadata properties of emf image
 		// Images.EMF.getMetadataProperties();
 
-		// Working with Wmf
+		//endregion
+
+		//region Working with Wmf
+
 		// Get metadata properties of Wmf image
 		// Images.WMF.getMetadataProperties();
 
-		// Retrieve Image Size
+		//endregion
+
+		//region Retrieve Image Size
+
 		// Retrive the height and width of images of supported formats
 		// Images.retrieveImageSize("\\Images\\SampleImages\\");
 
-		// Read Byte order of images
+		//endregion
+
+		//region Read Byte order of images
+
 		// Reads byte order of images of supported formats
 		// Images.readByteOrder("\\Images\\SampleImages\\");
 
-		// Working with APIs
+		//endregion
+
+		//endregion
+
+		//region Working with APIs
+
 		// Compare document metadata
 		// APIs.Document.compareDocument("\\Documents\\Pdf\\sample.pdf",
 		// "\\Documents\\Pdf\\sample.pdf");
@@ -417,6 +595,7 @@ public class MainClass {
 
 		// Search document metadata in image
 		// APIs.Image.searchMetadata("\\Images\\Tiff\\sample.tif");
+
 
 		// FormatRecognizer: Recognizes the format of file
 		// MIMETypeDetector.getFileFormats("/Documents/Doc/sample.doc");
@@ -448,7 +627,12 @@ public class MainClass {
 		// FormatRecognizer: Recognizes the format of all files in a directory
 		// Common.getFileFormats("/Documents/Doc/");
 
-		// Working with emails
+		//endregion
+
+		//region Working with emails
+
+		//region Working with Outlook
+
 		// Get Outlook email metadata
 		// Emails.OutLook.getOutlookEmailMetadata();
 
@@ -457,6 +641,10 @@ public class MainClass {
 
 		// Remove Outlook email metadata
 		// Emails.OutLook.removeOutlookEmailMetadata();
+
+		//endregion
+
+		//region Working with Eml
 
 		// Get email metadata
 		// Emails.Eml.getEmailMetadata();
@@ -467,7 +655,13 @@ public class MainClass {
 		// Remove email metadata
 		// Emails.Eml.removeEmailMetadata();
 
-		// Working with MP3 Files
+		//endregion
+
+		//endregion
+
+		//region Working with Audio Formats
+
+		//region Working with MP3 Files
 
 		// Export metadata of Mp3 format to Excel
 		// AudioFormats.Mp3.exportMetadataToExcel();
@@ -476,34 +670,43 @@ public class MainClass {
 		// AudioFormats.Mp3.detectMp3Format();
 
 		// Read ID3v2 tag in MP3 format
-		// AudioFormats.Mp3.readID3v2Tag();
+		// AudioFormats.Mp3.readID3v2Tags();
 
 		// Update ID3v2Tag
-		// AudioFormats.Mp3.updateID3v2Tag();
+		// AudioFormats.Mp3.updateID3v2Tags();
 
 		// Remove ID3v2Tag
-		// AudioFormats.Mp3.removeID3v2Tag();
+		// AudioFormats.Mp3.removeID3v2Tags();
 
 		// Read ID3v1 tag in MP3 format
-		// AudioFormats.Mp3.readID3v1Tag();
+		// AudioFormats.Mp3.readID3v1Tags();
 
 		// Read MPEG audio information
 		// AudioFormats.Mp3.readMPEGAudioInfo();
 
-		// Read Layrics3 Tag
-		// AudioFormats.Mp3.readLayrics3Tag();
+		// Read Lyrics3 Tag
+		// AudioFormats.Mp3.readLyrics3Tags();
+
+		// Update Lyrics3 Tag
+		// AudioFormats.Mp3.updateLyrics3Tag();
+
+		// Update Lyrics3 Tag by replacing whole field collection
+		// AudioFormats.Mp3.updateLyrics3TagByReplacingWholeFieldCollection();
+
+		// Update Lyrics3 Tag by replacing whole tag
+		// AudioFormats.Mp3.updateLyrics3TagByReplacingWholeTag();
 
 		// Update ID3v1Tag
-		// AudioFormats.Mp3.updateID3v1Tag();
+		// AudioFormats.Mp3.updateID3v1Tags();
 
 		// Read ID3 metadata directtly from MP3
 		// AudioFormats.Mp3.readId3MetadataDirectly();
 
 		// Read APEV2 tag in MP3 files
-		// AudioFormats.Mp3.readApev2Tag();
+		// AudioFormats.Mp3.readApev2Tags();
 
         //Validate ID3 input metadata before saviing
-        //AudioFormats.Mp3.validateID3Metadata();
+        // AudioFormats.Mp3.validateID3Metadata();
 
         //Read additional properties from ID3v2 tag
         //AudioFormats.Mp3.readAdditionalID3v2Properties();
@@ -523,42 +726,118 @@ public class MainClass {
 		// Read ImageCover using Metadata Utility
 		//AudioFormats.Mp3.readImageCoverMetadataUtility();
 
-		// Working with WAV Files
+		//Read ID3v2 tag in MP3 format using stream
+		//AudioFormats.Mp3.readID3v2TagUsingStream();
+
+		// Update ID3v2Tag
+		//AudioFormats.Mp3.updateID3v2TagUsingStream();
+
+		//endregion
+
+		//region Working with WAV Files
+
 		// Detect WAV format
 		// AudioFormats.Wav.detectWavFormat();
 
 		// Read Audio Details
 		// AudioFormats.Wav.readAudioDetails();
 
-		// Working with Video Formats
+		// Update XMP Metadata
+		//AudioFormats.Wav.updateXmpMetadata();
+
+		//Remove XMP Metadata
+		//AudioFormats.Wav.removeXmpMetadata();
+
+		//Update XMP Metadata using stream
+		//AudioFormats.Wav.UpdateXmpMetadataUsingStream();
+
+		//endregion
+
+		//endregion
+
+		//region Working with Video Formats
+
+		//region Working with AVI
 		// Read Header information in AVI format
 		// VideoFormats.Avi.readAviMainHeader();
 
-		//Detects EPUB file format
-		//Documents.EPUB.detectEPUBFormat();
+		// Read Avi Main header using stream
+		// VideoFormats.Avi.readAviMainHeaderUsingStream();
 
-		//Read EPUB file format metadata
-		//Documents.EPUB.readEPUBFormatMetadata();
+		//endregion
 
-		//Read Dublin Core Metadata
-		//Documents.EPUB.readDublinCoreMetadata();
+		//region Working with Mov
 
-		//Read Image covr from EPUB Format
-		//Documents.EPUB.readImageCover();
+		//Detect Mov file format
+		//VideoFormats.Mov.detectMovFormat();
 
-		//Read version of EPUB Package
-		//Documents.EPUB.readEPUBPackageVersion();
+		//endregion
 
-		//Read DublinCore Metadata using unified approach
-		//Documents.EPUB.readDublinCoreMetadataUtility();
+		//region Working with Flv
 
-		//Working with Bit Torrent
+        //Detect FLV file format
+        //VideoFormats.Flv.detectFlvFormat();
+
+        //Get XMP Metadata
+        //VideoFormats.Flv.getXMPMetadata();
+
+        //Update XMP Metadata
+        //VideoFormats.Flv.updateXMPMetadata();
+
+        //Remove XMP Metadata
+        //VideoFormats.Flv.removeXMPMetadata();
+
+        //Read FLV header metadata
+        //VideoFormats.Flv.readFlvHeaderMetadata();
+
+		//endregion
+
+		//endregion
+
+		//region Working with ZIP Archives
+
+		//Detect Zip file format using format factory
+        //Archives.Zip.detectZipFormat();
+
+        //Get Zip format metadata
+        //Archives.Zip.getZipMetadata();
+
+        // Get ZIP format metadata using stream
+        //Archives.Zip.getZipMatadataUsingStream();
+
+        //Remove ZIP format
+        //Archives.Zip.removeComment();
+
+        //Update ZIP format Comment
+        //Archives.Zip.updateComment();
+
+		//endregion
+
+		//region Working with Torrents
+
+		//region Working with Bit Torrent
 
 		//Read Bit Torrent File Metadata
 		//Torrent.BitTorrent.getTorrentMetadata();
 
 		//Update Bit Torrent File Metadata
 		//Torrent.BitTorrent.updateTorrentMedata();
+
+		//Read Bit Torrent File Metadata Using Stream
+		//Torrent.BitTorrent.getTorrentMetadataUsingStream();
+
+		//endregion
+
+		//endregion
+
+		//region Working with DublinCore Metadata
+		//Get DublinCore of supported file formats using MetadataUtility class
+        //DublinCore.getDublinCoreMetadata();
+
+        //Get DublinCore Metadata of supported file formats using IDublinCore Interface
+        //DublinCore.getDublinCoreMetadataUsingIDublinCore();
+
+		//endregion
 
 	}
 }
